@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial, sans-serif;
+  }
+  body {
+    background: rgb(26, 26, 26);
+  }
+
+  #deal-data, #play-data, #deal-cards, #play-cards, #play-control { padding: 0px; }
+#deal-data, #play-data { font-weight: 700; }
+#deal-cards, #play-cards { min-height: 120px; }
+
+
+
+#deal-stand, #play-stand {
+  display: none; padding: 5px;
+  color: #fff; background: #ab2323;
+}
+#deal-stand.stood, #play-stand.stood { display: inline-block; }
+  .container {
+    height: 90vh;
+    perspective: 700px;
+  }
+  #deal-cards, #play-cards {
+    display: flex;
+    flex-wrap: wrap;
+    color:black;
+  }
+  .bj-card {
+    display: flex;
+    position:relative;
+    transform-style: preserve-3d;
+    align-items: center; justify-content: center;
+    margin: 0px;
+    width: 100px; height: 150px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    font-size: 1.1em;
+    text-align: center;
+    background: rgb(185, 12, 162);
+    transition: transform 1s, box-shadow 1s;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.75);
+    margin-left:13rem;
+    backface-visibility: visible;
+    
+    transform: rotateY(0deg) scale(1);
+  }
+  .card {
+  
+    transform: rotateY(0deg) scale(1);
+  }
+  #deal-first .front { display: none; }
+#deal-first.show .back { display: none; }
+#deal-first.show .front { display: block; }
+
+/* (C) PLAY CONTROLS */
+#play-control input {
+  cursor: pointer;
+  font-weight: 700;
+  padding: 10px 20px;
+  border: 0;
+  color: #fff;
+  background: #4381de;
+}
+#playc-hit, #playc-stand { display: none; }
+#play-control.started #playc-start { display: none; }
+#play-control.started #playc-hit, #play-control.started #playc-stand { display: inline-block; }
+
+
+  .blackjack-table {
+    position: relative;
+    clip-path: ellipse(55% 80vh at 50% 100px);
+    transform: rotateX(15deg);
+    overflow: hidden;
+    background: linear-gradient(to top, rgb(0, 45, 0), rgb(0, 205, 0));
+    height: 100%;
+    width: 90vw;
+    margin: 0 auto;
+    
+  }
+  .table-overlay {
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    padding-top: 4rem;
+    font-size: 3vw;
+  }
+  .table-overlay h1 {
+    text-shadow: 2px 5px 12px rgba(0, 0, 0, .55);
+  }
+
+  
+ 
+
